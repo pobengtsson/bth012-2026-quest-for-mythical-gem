@@ -1,5 +1,7 @@
 :root {
   --block-size: 5vh;
+  --map-width: 15;
+  --map-height: 15;
 }
 
 .cell.cloaked {
@@ -51,11 +53,11 @@ body {
 #screen {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(15, var(--block-size));
-  grid-template-rows: repeat(15, var(--block-size));
-  height: calc(var(--block-size)*15);
-  width: calc(var(--block-size)*15);
-  gap: 0px;
+  grid-template-columns: repeat(var(--map-width), var(--block-size));
+  grid-template-rows: repeat(var(--map-height), var(--block-size));
+  height: calc(var(--block-size) * var(--map-height));
+  width: calc(var(--block-size) * var(--map-width));
+  gap: 5px;
   background-color: black;
 }
 

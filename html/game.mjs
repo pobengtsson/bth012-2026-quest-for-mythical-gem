@@ -22,17 +22,17 @@ export class Game {
     await this.setState(new GameOn(this, this.screen))
   }
 
-  // async gameWon () {
-  //   await this.setState(new GameWon(this, this.screen))
-  // }
+  async gameWon () {
+    await this.setState(new GameWon(this, this.screen))
+  }
 
-  // async gameOver () {
-  //   await this.setState(new GameOver(this, this.screen))
-  // }
+  async gameOver () {
+    await this.setState(new GameOver(this, this.screen))
+  }
 
-  // gameIsOver () {
-  //   return !this.player.isHealthy()
-  // }
+  gameIsOver () {
+    return !this.player.isHealthy()
+  }
 
   async setState(newState) {
     this.clearEventListener()
